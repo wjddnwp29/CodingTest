@@ -8,9 +8,6 @@ def solution(n, wires):
                 cnt += dfs(i)
         return cnt
     
-    n = 9
-    wires = [[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]
-
     for i in range(len(wires)):
         g = [[] for _ in range(n+1)]
         vist = [False] * (n+1)
