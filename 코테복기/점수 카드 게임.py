@@ -27,3 +27,15 @@ def solution(points):
     scores = [s for s in range(10000) if dp[s]]
             
     return max(scores), min(scores)
+## 2번쨰
+def solution(points):
+    dp = {0}
+    for a, b in points:
+        op1, n1 = a[0], a[1::]
+        op2, n2 = b[0], b[1::]
+        tmp = {}
+        for s in dp:
+            tmp.add(apply(s,op1,n1))
+            tmp.add(apply(s,op2,n2))
+        dp = tmp
+    return [max(dp),min(dp)]
